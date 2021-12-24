@@ -23,6 +23,7 @@ const catalog = () => {
     catalogModalItems.forEach(item => {
         item.addEventListener('click', () => {
             const text = item.textContent
+            
             getData().then((data) => {
                 renderGoods(categoryFilter(data, text))
             })
